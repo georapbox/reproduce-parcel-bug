@@ -1,0 +1,47 @@
+{
+  "name": "reproduce-parcel-bug",
+  "version": "1.0.0",
+  "description": "This repo is a minimal reproduction of a bug in Parcel v2.10.3.",
+  "module": "dist/my-counter.js",
+  "type": "module",
+  "targets": {
+    "my-counter": {
+      "context": "browser",
+      "outputFormat": "esmodule",
+      "source": "src/my-counter.js",
+      "optimize": true,
+      "isLibrary": true,
+      "distDir": "dist",
+      "engines": {
+        "browsers": "> 0.5%, last 2 versions, not dead"
+      }
+    },
+    "my-counter-defined": {
+      "context": "browser",
+      "outputFormat": "esmodule",
+      "source": "src/my-counter-defined.js",
+      "optimize": true,
+      "isLibrary": true,
+      "distDir": "dist",
+      "engines": {
+        "browsers": "> 0.5%, last 2 versions, not dead"
+      }
+    }
+  },
+  "scripts": {
+    "clean": "rimraf dist .parcel-cache",
+    "build": "parcel build",
+    "serve": "http-server",
+    "start": "npm-run-all clean build serve"
+  },
+  "devDependencies": {
+    "http-server": "~14.1.1",
+    "npm-run-all": "~4.1.5",
+    "parcel": "~2.10.3",
+    "rimraf": "~5.0.5"
+  },
+  "author": {
+    "name": "George Raptis",
+    "email": "georapbox@gmail.com"
+  }
+}
