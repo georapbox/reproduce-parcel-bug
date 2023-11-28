@@ -1,4 +1,4 @@
-# Reproduce Parcel bug
+# Reproduce Parcel bug [#9414](https://github.com/parcel-bundler/parcel/issues/9414)
 
 This repo is a minimal reproduction of a bug in Parcel v2.10.3.
 
